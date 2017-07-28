@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane id="pane" fx:id="pane" alignment="center" hgap="10" maxHeight="500.0" maxWidth="550.0" minHeight="500.0" minWidth="550.0" prefHeight="500.0" prefWidth="550.0" styleClass="pane" stylesheets="@style.css" vgap="10" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="OMHMS simple updater" textAlignment="CENTER" wrappingWidth="400.0" GridPane.rowIndex="1">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <AnchorPane fx:id="anchorPane" GridPane.rowIndex="3">
+         <children>
+            <CheckBox id="cb_mods" fx:id="cb_mods" layoutX="275.0" layoutY="53.0" mnemonicParsing="false" onAction="#switchUpdateMods" text="Обновить моды" />
+            <Button id="button_launch" fx:id="button_launch" layoutY="-20.0" mnemonicParsing="false" onAction="#button_launch_clicked" prefHeight="55.0" prefWidth="400.0" text="Запустить игру!">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Button>
+            <Button id="button_launch" fx:id="button_update" layoutY="-20.0" mnemonicParsing="false" onAction="#button_update_clicked" prefHeight="55.0" prefWidth="400.0" text="Обновить моды!" visible="false">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button id="button_launch" fx:id="button_client" layoutY="47.0" mnemonicParsing="false" onAction="#button_client_clicked" prefHeight="33.0" prefWidth="252.0" text="Скачать клиент!" />
+         </children>
+      </AnchorPane>
+      <TextArea fx:id="textArea" editable="false" prefHeight="168.0" prefWidth="401.0" GridPane.rowIndex="6" />
+      <Pane prefHeight="53.0" prefWidth="401.0" GridPane.rowIndex="2" />
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
