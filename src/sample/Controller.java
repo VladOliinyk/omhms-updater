@@ -23,8 +23,8 @@ import java.util.zip.ZipFile;
 
 public class Controller {
 
-    private String CLIENT_URL = "http://mc9.serva4ok.ru/server663904/www/launcher/client.zip";
-    private String MODS_URL = "http://mc9.serva4ok.ru/server663904/www/launcher/mods.zip";
+    private String CLIENT_URL = "http://mc9.serva4ok.ru/server664198/www/launcher/client.zip";
+    private String MODS_URL = "http://mc9.serva4ok.ru/server664198/www/launcher/mods,zip";
 
     @FXML
     CheckBox cb_mods;
@@ -71,7 +71,7 @@ public class Controller {
             URL website = null;
             try {
                 log("Downloading mods archive...");
-                website = new URL(MODS_URL);
+                website = new URL("" + MODS_URL);
                 ReadableByteChannel rbc = Channels.newChannel(website.openStream());
                 FileOutputStream fos = new FileOutputStream("mods.zip");
                 fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
@@ -162,7 +162,7 @@ public class Controller {
             URL website = null;
             try {
                 log("Downloading client archive...");
-                website = new URL(CLIENT_URL);
+                website = new URL(""+CLIENT_URL);
                 ReadableByteChannel rbc = Channels.newChannel(website.openStream());
                 FileOutputStream fos = new FileOutputStream("client.zip");
                 fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
